@@ -13,13 +13,15 @@ public class CooperationActivity extends AppCompatActivity implements Cooperatio
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cooperation);
 
-        CooperationFragment fragment = (CooperationFragment) getSupportFragmentManager().findFragmentById(R.id.cooperation);
+        CooperationFragment fragment = (CooperationFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.cooperation);
         fragment.setCooperationText("Hello, cooperation!");
     }
 
     @Override
     public void onCooperation(String cooperationText) {
-        Toast.makeText(CooperationActivity.this, "Coo coo! " + cooperationText
-                , Toast.LENGTH_SHORT).show();
+        Toast.makeText(CooperationActivity.this,
+                "Coo coo! " + cooperationText,
+                Toast.LENGTH_SHORT).show();
     }
 }
