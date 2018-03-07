@@ -20,15 +20,17 @@ public class TaskActivity extends AppCompatActivity implements Switcher {
 
     @Override
     public void onFirstClick() {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, new TaskRedFragment());
+        FragmentTransaction transaction = getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container, new TaskRedFragment());
         transaction.commit();
     }
 
     @Override
     public void onSecondClick() {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, new TaskGreenFragment());
+        FragmentTransaction transaction = getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container, new TaskGreenFragment());
         transaction.commit();
     }
 }
